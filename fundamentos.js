@@ -3,7 +3,8 @@ let emmanuel = {
     years: 28,
 };
 
-function nameUpperCase({name}){
+function nameUpperCase(persona){
+    var { name }= persona
     console.log(name.toUpperCase());
     
 }
