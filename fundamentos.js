@@ -1,12 +1,11 @@
-let emmanuel = {
-    name: 'Emmanuel',
-    years: 28,
-};
+let numero = 1, numeroLetra = 1;
 
-function nameUpperCase(persona){
-    var { name }= persona
-    console.log(name.toUpperCase());
-    
+const emmanuel= {
+    name: 'Emmanuel',
 }
-nameUpperCase(emmanuel)
-nameUpperCase({name:'Lisa'})
+
+const emmanuel2={
+    ...emmanuel,
+}
+
+let emmanuel3 = emmanuel
