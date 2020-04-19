@@ -1,19 +1,15 @@
-let emmanuel = {
-    nombre: 'Emmanuel',
-    peso: 71
-};
+let contador = 0
+const LLUEVE = () => Math.random() < 0.25;
 
-const DIAS_ANO = 365
-const INCREMENTO_PESO=.2 
-const PERDIDA_PESO = persona => persona.peso -= INCREMENTO_PESO;
-const AUMENTO_PESO = persona => persona.peso += INCREMENTO_PESO;
+do {
+  contador++;
+  
+} while (!LLUEVE());
 
-for(let i=0; i<=DIAS_ANO; i++ ){
-    let random = Math.random();
-    if(random <.25){
-        PERDIDA_PESO(emmanuel)
-    }else if(random >.50){
-        AUMENTO_PESO(emmanuel)
-    }
+if(contador === 1){
+    console.log(`Llovio ${contador} día `);
+}else{
+    console.log(`Llovio ${contador} días `);
+
 }
-console.log(`el peso ${emmanuel.nombre} es de ${emmanuel.peso.toFixed(2)}`);
+
