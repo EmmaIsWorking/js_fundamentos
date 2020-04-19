@@ -13,10 +13,19 @@ let lisa={
   edad: 38,
   altura: 1.58,
 }
-
-let personas = [emmanuel, diana, lisa];
-
-for(let i = 0; i<personas.length; i++){
-  personas[i]
-  console.log(`${personas[i].nombre} tiene ${personas[i].edad} años y mide ${personas[i].altura}`)
+let petter={
+  nombre:'Petter',
+  edad: 73,
+  altura: 1.80,
 }
+
+let personasAltas = (persona) => persona.altura > 1.70
+let personasPequeñas = (persona)=> persona.altura < 1.70
+
+let personas = [emmanuel, diana, lisa, petter];
+
+let filtroPersonasAltas = personas.filter(personasAltas)
+let filtroPersonasBajas = personas.filter(personasPequeñas);
+
+console.log(filtroPersonasBajas)
+console.log(filtroPersonasAltas)
