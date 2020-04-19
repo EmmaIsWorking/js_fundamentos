@@ -1,27 +1,19 @@
-let emmanuel={
-    name:'Emmanuel',
-    age: 28,
-};
-let ricardo={
-    name: 'Ricardo',
-    age: 13
+let emmanuel = {
+    nombre: 'Emmanuel',
+    peso: 71
 };
 
-const MAYORIA_EDAD = 18;
-const ES_MENOR_EDAD = (persona)=> {
-    console.log(`${persona.name} es menor de edad`);
-}
+let random = Math.random();
+const DIAS_ANO = 365
+const INCREMENTO_PESO=.2 
+const PERDIDA_PESO = persona => persona.peso += INCREMENTO_PESO;
+const AUMENTO_PESO = persona => persona.peso += AUMENTO_PESO;
 
-let esMayorDeEdad= (persona) => {
-    if (persona.age >= MAYORIA_EDAD) {
-    console.log(`${persona.name} es mayor de edad por que tiene ${persona.age} años`
-    );
-    } else {
-    console.log(`${persona.name} es menor de edad por que tiene ${persona.age} años`
-    );
+for(let i=0; i<=DIAS_ANO; i++ ){
+    if(random <.25){
+        PERDIDA_PESO(emmanuel)
+    }else if(random >.50){
+        AUMENTO_PESO(emmanuel)
     }
-};
-
-esMayorDeEdad(emmanuel)
-ES_MENOR_EDAD(ricardo);
-
+}
+console.log(`el peso ${emmanuel.nombre} es de ${emmanuel.peso.toFixed(2)}`);
