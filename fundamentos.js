@@ -1,47 +1,21 @@
-let emmanuel={
-  nombre:'Emmanuel',
-  edad: 28,
-  altura: 1.68,
-  libros:2,
+function persona(nombre, apellido, anos, altura) {
+  this.nombre = nombre
+  this.apellido = apellido
+  this.anos = anos
+  this.altura = altura
 }
-let diana={
-  nombre:'Diana',
-  edad: 25,
-  altura: 1.52,
-  libros: 5,
-}
-let lisa={
-  nombre:'Lisa',
-  edad: 38,
-  altura: 1.58,
-  libros: 8,
-}
-let petter={
-  nombre:'Petter',
-  edad: 73,
-  altura: 1.80,
-  libros: 9,
+let emmanuel = new persona("Emmanuel", "Garcia", 28, 1.68);
+let ricardo = new persona("Ricardo", "Garcia", 13, 1.4);
+persona.prototype.mayorMenorEdad = function(){
+  if(this.anos < 18){
+    console.log(`${this.nombre} es menor de edad`);
+  }else{
+    console.log(`${this.nombre} es mayor de edad`);
+  }
 }
 
-let personasAltas = (persona) => persona.altura > 1.70
-let personasPequeñas = (persona)=> persona.altura < 1.70
+emmanuel.mayorMenorEdad()
+ricardo.mayorMenorEdad()
 
 
-let personas = [emmanuel, diana, lisa, petter];
 
-let convertirAlturaMetro = (personas) =>({
-    ... personas,
-    altura: personas.altura * 100
-})
-
-let totalLibros = (acum,personas) => acum += personas.libros
-
-let filtroPersonasAltas = personas.filter(personasAltas)
-let filtroPersonasBajas = personas.filter(personasPequeñas);
-let convertirPersonasAlturaMetro = personas.map(convertirAlturaMetro)
-let numeroDeLibros = personas.reduce(totalLibros,0)
-
-console.log(filtroPersonasBajas)
-console.log(filtroPersonasAltas)
-console.log(convertirPersonasAlturaMetro)
-console.log(numeroDeLibros);
