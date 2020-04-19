@@ -22,10 +22,18 @@ let petter={
 let personasAltas = (persona) => persona.altura > 1.70
 let personasPequeñas = (persona)=> persona.altura < 1.70
 
+
 let personas = [emmanuel, diana, lisa, petter];
+
+let convertirAlturaMetro = (personas) =>({
+    ... personas,
+    altura: personas.altura * 100
+})
 
 let filtroPersonasAltas = personas.filter(personasAltas)
 let filtroPersonasBajas = personas.filter(personasPequeñas);
+let convertirPersonasAlturaMetro = personas.map(convertirAlturaMetro)
 
 console.log(filtroPersonasBajas)
 console.log(filtroPersonasAltas)
+console.log(convertirPersonasAlturaMetro)
