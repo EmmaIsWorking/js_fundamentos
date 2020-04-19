@@ -3,13 +3,13 @@ let emmanuel = {
     peso: 71
 };
 
-let random = Math.random();
 const DIAS_ANO = 365
 const INCREMENTO_PESO=.2 
-const PERDIDA_PESO = persona => persona.peso += INCREMENTO_PESO;
-const AUMENTO_PESO = persona => persona.peso += AUMENTO_PESO;
+const PERDIDA_PESO = persona => persona.peso -= INCREMENTO_PESO;
+const AUMENTO_PESO = persona => persona.peso += INCREMENTO_PESO;
 
 for(let i=0; i<=DIAS_ANO; i++ ){
+    let random = Math.random();
     if(random <.25){
         PERDIDA_PESO(emmanuel)
     }else if(random >.50){
