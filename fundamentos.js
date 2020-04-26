@@ -1,25 +1,10 @@
-// let edad = 27;
+// console.log('a');
+// console.log('b');
+// setTimeout(() => console.log('d'), 2000);
+// console.log('e');
 
-// edad += 1;
 
-// let precioVino = 23.43
-
-// let totalVino = Math.round(precioVino * 3.45)
-
-// strgTotalVino= totalVino.toFixed(2)
-
-// intTotalVino = parseFloat(strgTotalVino)
-
-// ---
-
-let emmanuel = {
-    name: 'Emmanuel',
-    edad: 28,
+setTimeout(() => console.log('c'), 8000);
+for (let i = 0; i < 100000; i++) {
 }
 
-function nameUpperCase({name}) {
-    console.log(name.toUpperCase());
-}
-
-nameUpperCase(emmanuel)
-nameUpperCase({name: 'Lisa'})
