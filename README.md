@@ -28,3 +28,5 @@ Map()
 Reduce(function, 0)
 
 setTimeout(fn, time)
+
+$.get(url, {crossDomain:true}, callback)
